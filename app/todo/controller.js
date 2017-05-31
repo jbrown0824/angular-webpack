@@ -1,6 +1,8 @@
 class TodoController {
-    constructor() {
+    constructor(api) {
         const vm = this;
+
+        console.log('get API service', api);
 
         vm.todos = [
             {text: 'Build using Webpack', done: false},
@@ -20,5 +22,7 @@ class TodoController {
         };
     }
 }
+
+TodoController.$inject = ['api'];
 
 export default TodoController;

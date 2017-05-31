@@ -1,5 +1,5 @@
 <div class="todo-wrapper">
-    <h2>There are {{todo.getIncompleteTodos()}} things to do</h2>
+    <h2>Tasks To Do: {{todo.getIncompleteTodos()}}</h2>
     <ul>
         <li ng-repeat="item in todo.todos">
             <label class="todo">
@@ -10,8 +10,9 @@
     </ul>
     <form>
         <input placeholder="I need to..." type="text" ng-model="todo.formTodoText" />
-        <button ng-click="todo.addTodo()"><h2>Add</h2></button>
+        <button ng-click="todo.addTodo()">Add</button>
     </form>
 
+    <br />
     <button ng-click="todo.clearCompleted()">Clear completed</button>
 </div>
