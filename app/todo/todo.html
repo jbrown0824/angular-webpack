@@ -1,0 +1,17 @@
+<div class="todo-wrapper">
+    <h2>There are {{todo.getIncompleteTodos()}} things to do</h2>
+    <ul>
+        <li ng-repeat="item in todo.todos">
+            <label class="todo">
+                <input type="checkbox" ng-model="item.done"/>
+                <span class="done-{{item.done}}">{{item.text}}</span>
+            </label>
+        </li>
+    </ul>
+    <form>
+        <input placeholder="I need to..." type="text" ng-model="todo.formTodoText" />
+        <button ng-click="todo.addTodo()"><h2>Add</h2></button>
+    </form>
+
+    <button ng-click="todo.clearCompleted()">Clear completed</button>
+</div>
